@@ -40,7 +40,7 @@ git subtree split --prefix=src --branch egg-server
 git push https://github.com/giftman/egg-server-docker.git egg-server:master
 
 #pull to update 
-git subtree pull --prefix=src --squash https://github.com/giftman/egg-server-docker.git master
+git subtree pull --prefix=src --squash https://github.com/giftman/egg-server.git master
 ```
 
 I pull to update fail,I don't know why, solve next time..
