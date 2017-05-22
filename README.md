@@ -31,8 +31,7 @@ git subtree:
 * https://gist.github.com/kvnsmth/4688345
 
 ```
-git remote add origin https://github.com/giftman/egg-server-docker.git
-git push -u origin master
+git subtree add --prefix=src --squash https://github.com/giftman/egg-server.git master
 
 git subtree split --prefix=src --branch egg-server
 
