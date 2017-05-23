@@ -36,7 +36,7 @@ git subtree add --prefix=src --squash https://github.com/giftman/egg-server.git 
 git subtree split --prefix=src --branch egg-server
 
 #push to egg-server
-git push https://github.com/giftman/egg-server-docker.git egg-server:master
+git push https://github.com/giftman/egg-server.git egg-server:master
 
 #pull to update 
 git subtree pull --prefix=src --squash https://github.com/giftman/egg-server.git master
