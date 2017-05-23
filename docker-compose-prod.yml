@@ -3,12 +3,13 @@ weapp:
   build: ./src
   command: node index.js
   ports:
-    - "7001:7001"
+    - "80:80"
   volumes:
     - ./src:/src
   environment:
-    - EGG_SERVER_ENV=docker
-    - PORT=7001
+    - EGG_SERVER_ENV=prod
+    - NODE_ENV=production
+    - PORT=80
   links:
     - redis
     - mysql
@@ -16,7 +17,7 @@ redis:
   restart: always
   image: redis 
   ports:
-    - "6379:6379"
+    - "6379"
   volumes:
     - ./db/redis:/src
   links:
@@ -25,7 +26,7 @@ mysql:
   restart: always
   image: mysql
   ports:
-    - "3306:3306"
+    - "3306"
   volumes:
     - ./db/mysql:/docker-entrypoint-initdb.d
     - ./db/mysqlData:/var/lib/mysql
